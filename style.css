@@ -1,5 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 body
 {
+    background: white;
     margin: 0;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: Montserrat, Roboto, sans-serif;
+}
+.title
+{
+    font-size: 3.4em;
+    font-weight: 600;
+}
+
+/* Section 1 */
+#welcome
+{
+    height: 100vh;
+    padding-left: 20%;
+    display: flex;
+    align-items: center;
+}
+#welcome .subtitle
+{
+    color: #aaa;
+    font-size: 1.2em;
+}
+
+/* Section 2 */
+#frontend .title
+{
+    width: 100%;
+    margin: 5vh 0;
+    font-size: 3em;
+    text-align: center;
+}
+#frontend .my-skills
+{
+    margin: 0 10vw;
+    height: 100vh;
+}
+#frontend .my-skills .title
+{
+    font-size: 2.4em;
+}
+#frontend .my-skills .background *
+{
+    position: absolute;
+    width: 30px;
+    filter: opacity(0.5);
+    z-index: -1000;
+}
+#frontend .my-skills .card-container
+{
+    display: flex;
+    justify-content: space-evenly;
+}
+#frontend .my-skills .card-container .card
+{
+    padding: 20px;
+    border-radius: 13px;
+    background: rgba(230, 230, 230, 0.3);
+    box-shadow: 0px 0px 8px rgb(240, 240, 240);
 }
