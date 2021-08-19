@@ -1,65 +1,177 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-
-body
-{
+body {
     background: white;
+    /*linear-gradient(135deg, #ddd, #fcc, #ccf, #cfc)*/
     margin: 0;
     font-family: Montserrat, Roboto, sans-serif;
-}
-.title
-{
-    font-size: 3.4em;
-    font-weight: 600;
+    color: black;
 }
 
 /* Section 1 */
-#welcome
-{
+#welcome {
     height: 100vh;
     padding-left: 20%;
     display: flex;
     align-items: center;
 }
-#welcome .subtitle
-{
+
+h1 {
+    font-size: 3.4em;
+    font-weight: 600;
+}
+
+h4 {
     color: #aaa;
     font-size: 1.2em;
 }
 
 /* Section 2 */
-#frontend .title
-{
+h2 {
     width: 100%;
-    margin: 5vh 0;
-    font-size: 3em;
+    margin: 8vh 0 5vh 0;
+    font-size: 3.2em;
     text-align: center;
 }
-#frontend .my-skills
-{
+
+.my-skills {
     margin: 0 10vw;
-    height: 100vh;
+    min-height: 100vh;
 }
-#frontend .my-skills .title
-{
+
+h3 {
     font-size: 2.4em;
 }
-#frontend .my-skills .background *
-{
-    position: absolute;
+
+.background * {
+    position: relative;
     width: 30px;
     filter: opacity(0.5);
     z-index: -1000;
 }
-#frontend .my-skills .card-container
-{
+
+.cards-container {
+    width: 100%;
     display: flex;
     justify-content: space-evenly;
 }
-#frontend .my-skills .card-container .card
-{
+
+.card {
     padding: 20px;
     border-radius: 13px;
-    background: rgba(230, 230, 230, 0.3);
-    box-shadow: 0px 0px 8px rgb(240, 240, 240);
+    background: rgba(250, 250, 250, 0.2);
+    backdrop-filter: blur(15px);
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 0px 10px;
+    text-align: center;
+}
+
+.card-title {
+    font-size: 1.4em;
+}
+
+.circle-progress {
+    margin-top: 27px;
+    padding: 20px;
+    position: relative;
+}
+
+.circle-cover {
+    background: white;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    width: 240px;
+    position: absolute;
+    z-index: 9;
+    transform: translate(-20px, -20px);
+    box-shadow: rgba(0, 0, 0, 0.08) 0 0 20px;
+}
+
+.circle-in {
+    position: relative;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    z-index: 100;
+    color: black;
+}
+
+.hide-left {
+    position: absolute;
+    width: 0;
+    border-radius: 50%;
+    border-top: 120px transparent solid;
+    border-right: 120px white solid;
+    border-bottom: 120px white solid;
+    border-left: 120px transparent solid;
+    transform: translate(-20px, -20px) rotate(-45deg);
+    z-index: 11;
+}
+
+.right-progress {
+    position: absolute;
+    width: 0;
+    border-radius: 50%;
+    border-top: 120px transparent solid;
+    border-left: 120px transparent solid;
+    z-index: 10;
+}
+
+.left-progress {
+    position: absolute;
+    width: 0;
+    border-radius: 50%;
+    border-top: 120px transparent solid;
+    border-left: 120px transparent solid;
+    z-index: 12;
+}
+
+.progress {
+    position: absolute;
+    font-size: 2.6em;
+}
+
+.card:nth-child(1) .right-progress {
+    border-right: 120px red solid;
+    border-bottom: 120px red solid;
+    transform: translate(-20px, -20px) rotate(135deg);
+}
+
+.card:nth-child(1) .left-progress {
+    border-right: 120px red solid;
+    border-bottom: 120px red solid;
+    transform: translate(-20px, -20px) rotate(-81deg);
+}
+
+.card:nth-child(2) .right-progress {
+    border-right: 120px dodgerblue solid;
+    border-bottom: 120px dodgerblue solid;
+    transform: translate(-20px, -20px) rotate(135deg);
+}
+
+.card:nth-child(2) .left-progress {
+    border-right: 120px dodgerblue solid;
+    border-bottom: 120px dodgerblue solid;
+    transform: translate(-20px, -20px) rotate(-107deg);
+}
+
+.card:nth-child(3) .right-progress {
+    border-right: 120px rgb(243, 243, 0) solid;
+    border-bottom: 120px rgb(243, 243, 0) solid;
+    transform: translate(-20px, -20px) rotate(135deg);
+}
+
+.card:nth-child(3) .left-progress {
+    border-right: 120px rgb(243, 243, 0) solid;
+    border-bottom: 120px rgb(243, 243, 0) solid;
+    transform: translate(-20px, -20px) rotate(171deg);
+}
+
+/* WORKS */
+.works {
+    margin: 0 10vw;
+    height: 100vh;
 }
