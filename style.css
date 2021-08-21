@@ -194,7 +194,7 @@ h3 {
 }
 
 .work {
-    margin: 35px 20px;
+    margin: 35px 20px 50px 20px;
 }
 
 .preview {
@@ -203,7 +203,7 @@ h3 {
     aspect-ratio: 16/9;
     width: 50%;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 10px;
-    float: left;
+    background: linear-gradient(135deg, #fcc, #ccf, #cfc);
 }
 
 .didascaly {
@@ -213,7 +213,7 @@ h3 {
     background: white;
     border: 3px solid black;
     border-radius: 20px;
-    aspect-ratio: 3/1;
+    aspect-ratio: 3.3/1;
     width: 40%;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 10px;
 }
@@ -230,13 +230,9 @@ h3 {
     margin: 6px 1px;
 }
 
-.work:nth-child(1) .preview {
-    background: linear-gradient(135deg, #fcc, #ccf, #cfc);
-}
-
 .work:nth-child(1) .didascaly {
-    left: -7%;
-    top: 7vw;
+    left: 44%;
+    top: 8vw;
 }
 
 .work:nth-child(1) .didascaly .line:nth-child(2) {
@@ -245,6 +241,48 @@ h3 {
 
 .work:nth-child(1) .didascaly .line:nth-child(3) {
     width: 68%;
+}
+
+.work:nth-child(2) .preview {
+    position: relative;
+    left: 40%;
+    z-index: 1;
+}
+
+.work:nth-child(2) .didascaly {
+    left: 4%;
+    top: 3.5vw;
+    z-index: 2;
+    aspect-ratio: 4/1;
+}
+
+.work:nth-child(2) .didascaly .line:nth-child(2) {
+    width: 88%;
+}
+
+.work:nth-child(2) .didascaly .line:nth-child(3) {
+    width: 72%;
+}
+
+.work:nth-child(3) .preview {
+    position: relative;
+    left: 3%;
+    z-index: 1;
+}
+
+.work:nth-child(3) .didascaly {
+    left: 40%;
+    top: 14vw;
+    z-index: 2;
+    aspect-ratio: 4/1;
+}
+
+.work:nth-child(3) .didascaly .line:nth-child(2) {
+    width: 62%;
+}
+
+.work:nth-child(3) .didascaly .line:nth-child(3) {
+    width: 72%;
 }
 
 @media screen and (max-width: 960px) {
@@ -273,5 +311,8 @@ h3 {
         right: unset;
         bottom: unset;
         aspect-ratio: unset;
+    }
+    .work:nth-child(2) .preview {
+        position: initial;
     }
 }
