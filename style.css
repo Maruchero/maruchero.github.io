@@ -9,9 +9,10 @@ body {
 }
 
 /* Section 1 */
+
 #welcome {
     height: 100vh;
-    padding-left: 20%;
+    padding-left: 10%;
     display: flex;
     align-items: center;
 }
@@ -27,6 +28,7 @@ h4 {
 }
 
 /* Section 2 */
+
 h2 {
     width: 100%;
     margin: 8vh 0 5vh 0;
@@ -36,7 +38,7 @@ h2 {
 
 .my-skills {
     margin: 0 10vw;
-    min-height: 100vh;
+    min-height: 80vh;
 }
 
 h3 {
@@ -51,18 +53,32 @@ h3 {
 }
 
 .cards-container {
+    margin: 5vh 0 15vh 0;
     width: 100%;
-    display: flex;
-    justify-content: space-evenly;
+    text-align: center;
 }
 
 .card {
+    display: inline-block;
+    margin: 5px;
     padding: 20px;
     border-radius: 13px;
     background: rgba(250, 250, 250, 0.2);
     backdrop-filter: blur(15px);
     box-shadow: rgba(0, 0, 0, 0.07) 0px 0px 10px;
-    text-align: center;
+}
+
+@media screen and (min-width: 960px) {
+    #welcome {
+        padding-left: 20%;
+    }
+    .cards-container {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .card {
+        display: block;
+    }
 }
 
 .card-title {
@@ -129,7 +145,7 @@ h3 {
     z-index: 12;
 }
 
-.progress {
+.circle-in .progress {
     position: absolute;
     font-size: 2.6em;
 }
@@ -171,7 +187,174 @@ h3 {
 }
 
 /* WORKS */
+
 .works {
-    margin: 0 10vw;
-    height: 100vh;
+    margin: 0 10vw 30vh 10vw;
+    min-height: 110vh;
+}
+
+.work {
+    margin: 35px 20px 50px 20px;
+}
+
+.preview {
+    border: 3px solid black;
+    border-radius: 20px;
+    aspect-ratio: 16/9;
+    width: 50%;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 10px;
+    background: linear-gradient(135deg, #fcc, #ccf, #cfc);
+}
+
+.didascaly {
+    position: relative;
+    float: left;
+    padding: 20px;
+    background: white;
+    border: 3px solid black;
+    border-radius: 20px;
+    aspect-ratio: 3.3/1;
+    width: 40%;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 10px;
+}
+
+.didascaly .title {
+    font-size: 1.2em;
+    margin-bottom: 12px;
+}
+
+.didascaly .line {
+    height: 1em;
+    border-radius: 3px;
+    background: black;
+    margin: 6px 1px;
+}
+
+.work:nth-child(1) .didascaly {
+    left: 44%;
+    top: 8vw;
+}
+
+.work:nth-child(1) .didascaly .line:nth-child(2) {
+    width: 90%;
+}
+
+.work:nth-child(1) .didascaly .line:nth-child(3) {
+    width: 68%;
+}
+
+.work:nth-child(2) .preview {
+    position: relative;
+    left: 40%;
+    z-index: 1;
+}
+
+.work:nth-child(2) .didascaly {
+    left: 5%;
+    top: 3.5vw;
+    z-index: 2;
+    aspect-ratio: 4/1;
+}
+
+.work:nth-child(2) .didascaly .line:nth-child(2) {
+    width: 88%;
+}
+
+.work:nth-child(2) .didascaly .line:nth-child(3) {
+    width: 72%;
+}
+
+.work:nth-child(3) .preview {
+    position: relative;
+    left: 3%;
+    z-index: 1;
+}
+
+.work:nth-child(3) .didascaly {
+    left: 40%;
+    top: 14vw;
+    z-index: 2;
+    aspect-ratio: 4/1;
+}
+
+.work:nth-child(3) .didascaly .line:nth-child(2) {
+    width: 62%;
+}
+
+.work:nth-child(3) .didascaly .line:nth-child(3) {
+    width: 72%;
+}
+
+@media screen and (max-width: 960px) {
+    .didascaly:nth-child(1) {
+        top: 5vw;
+    }
+}
+
+@media screen and (max-width: 717px) {
+    .works-container {
+        display: flex;
+        justify-content: center;
+    }
+    .preview {
+        width: 380px;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+    }
+    .didascaly {
+        width: 380px;
+        box-sizing: border-box;
+        position: inherit;
+        float: unset;
+        top: unset;
+        left: unset;
+        right: unset;
+        bottom: unset;
+        aspect-ratio: unset;
+    }
+    .work:nth-child(2) .preview {
+        position: initial;
+    }
+}
+
+/* Jr. Software Developer */
+
+#developer {
+    margin-bottom: 20vh;
+}
+
+.programming-languages {
+    margin: 20px 10vw;
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    width: 60vw;
+    border-radius: 20px 20px 0 0;
+    font-size: 1.1em;
+    border-collapse: collapse;
+    backdrop-filter: blur(15px);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 10px;
+}
+th {
+    text-align: left;
+}
+table td, table th {
+    padding: 20px;
+}
+
+.progress-bar {
+    height: 8px;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 10px;
+    width: 100%;
+}
+
+.progress-bar .progress {
+    background: royalblue;
+    height: 8px;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 5px;
+    width: 80%;
 }
