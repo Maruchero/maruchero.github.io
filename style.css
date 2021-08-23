@@ -1,11 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+/* GLOBAL */
+
 body {
     background: white;
     /*linear-gradient(135deg, #ddd, #fcc, #ccf, #cfc)*/
     margin: 0;
     font-family: Montserrat, Roboto, sans-serif;
     color: black;
+}
+
+a {
+    color: inherit;
 }
 
 /* Section 1 */
@@ -285,12 +291,6 @@ h3 {
     width: 72%;
 }
 
-@media screen and (max-width: 960px) {
-    .didascaly:nth-child(1) {
-        top: 5vw;
-    }
-}
-
 @media screen and (max-width: 717px) {
     .works-container {
         display: flex;
@@ -337,11 +337,17 @@ table {
     backdrop-filter: blur(15px);
     box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 10px;
 }
+
 th {
     text-align: left;
 }
+
 table td, table th {
     padding: 20px;
+}
+
+table td:first-child, table th:first-child {
+    width: 36%;
 }
 
 .progress-bar {
@@ -357,4 +363,70 @@ table td, table th {
     border-radius: 4px;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 5px;
     width: 80%;
+}
+
+/* LINKS */
+
+#contacts {
+    margin: 0 10vw 23vh 10vw;
+}
+
+.links {
+    width: max-content;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.link {
+    aspect-ratio: 1/1;
+    width: 64px;
+    background: transparent;
+    border: 14px solid white;
+    /*border-left: none;*/
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.link:first-child {
+    border-left: 14px solid white;
+}
+
+.bg {
+    width: 0;
+    height: 0;
+    position: absolute;
+    border-radius: 50%;
+    border-top: 45px solid black;
+    border-bottom: 45px solid black;
+    border-left: 45px solid transparent;
+    border-right: 45px solid transparent;
+    z-index: -100;
+    transition: all 0.3s ease-in;
+}
+
+.icon {
+    z-index: 100;
+    aspect-ratio: 1/1;
+    width: 60px;
+    background: white;
+    transition: all 1s ease-in;
+    margin: 0;
+    border: 0 solid transparent;
+    padding: 0;
+}
+
+.link:hover .bg {
+    transform: rotate(90deg);
+}
+
+/* FOOTER */
+
+footer {
+    height: 35vh;
+    background: #333;
+    text-align: center;
+    color: #fff;
+    padding-top: 10vh;
 }
