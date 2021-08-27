@@ -13,9 +13,9 @@ window.onscroll = function () {
         // (scroll - 15 * vh) / vh    --->    0 - 30 vh
 
         // !use sin() and cos()!
-        
+
         rotation = (scroll - 15 * vh) / vh * 3;
-        translate = ((scroll - 15 * vh) / vh) /  (30 / (mainTitle.offsetHeight / 2));
+        translate = ((scroll - 15 * vh) / vh) / (30 / (mainTitle.offsetHeight / 2));
         scale = 1 - ((scroll - 15 * vh) / vh / 70)
         console.log(rotation + ", " + translate + ", " + scale);
         mainTitle.style = "transform: perspective(800px) rotateX(" + rotation + "deg) translateY(" + translate + "px) scale(" + scale + ")";
@@ -25,9 +25,9 @@ window.onscroll = function () {
 }
 
 function codepen_left() {
-    
+
 }
 
 function codepen_right() {
-    
+
 }
