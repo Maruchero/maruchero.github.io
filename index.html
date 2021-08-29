@@ -118,15 +118,18 @@
             <h3>
                 CSS art
             </h3>
+
             <div class="codepen">
                 <button class="arrow-left" onclick="codepen_left()">
                     <span></span>
                     <span></span>
                 </button>
                 <div class="main-window">
-                    <div class="window"></div>
+                    <a href="https://codepen.io/Under3nder/pen/jOwPJKN" id="codepen-url">
+                        <img src="img/codepen-1.png" class="window" id="codepen-img">
+                    </a>
                     <div class="didascaly">
-                        <div class="title">Title</div>
+                        <div class="title" id="codepen-title">animated-button</div>
                         <div class="line"></div>
                         <div class="line"></div>
                     </div>
@@ -139,6 +142,7 @@
                     <!-- Here goes codepen links and images -->
                 </div>
             </div>
+
         </div>
     </section>
     <section id="developer">
@@ -146,14 +150,9 @@
             Jr Software Developer
         </h2>
         <div class="programming-languages">
-            <table>
+            <table id="table">
                 <tr>
-                    <th colspan="2" style="text-align: center;
-                        font-size: 1.2em;
-                        border-bottom: 1px solid grey;
-                        border-left: 20px solid transparent;
-                        border-right: 20px solid transparent;
-                        padding-bottom: 13px;">
+                    <th colspan="2">
                         Programming skill
                     </th>
                 </tr>
@@ -171,8 +170,8 @@
                     </td>
                     <td>
                         <div class="progress-bar">
-                            <div class="progress" style="width:90%;"></div>
-                            <span class="percentage">90%</span>
+                            <div class="progress" id="python-bar"></div>
+                            <span class="percentage" id="python-percentage">0%</span>
                         </div>
                     </td>
                 </tr>
@@ -182,8 +181,8 @@
                     </td>
                     <td>
                         <div class="progress-bar">
-                            <div class="progress" style="width:80%;"></div>
-                            <span class="percentage">80%</span>
+                            <div class="progress" id="java-bar"></div>
+                            <span class="percentage" id="java-percentage">0%</span>
                         </div>
                     </td>
                 </tr>
@@ -193,8 +192,8 @@
                     </td>
                     <td>
                         <div class="progress-bar">
-                            <div class="progress" style="width:60%;"></div>
-                            <span class="percentage">60%</span>
+                            <div class="progress" id="c-bar"></div>
+                            <span class="percentage" id="c-percentage">0%</span>
                         </div>
                     </td>
                 </tr>
@@ -204,8 +203,8 @@
                     </td>
                     <td>
                         <div class="progress-bar">
-                            <div class="progress" style="width:70%;"></div>
-                            <span class="percentage">70%</span>
+                            <div class="progress" id="assembly-bar"></div>
+                            <span class="percentage" id="assembly-percentage">0%</span>
                         </div>
                     </td>
                 </tr>
@@ -217,42 +216,33 @@
             Contacts
         </h2>
         <div class="links">
-            <div class="link">
-                <a href="#">
+            <a href="https://codepen.io/Under3nder">
+                <div class="link">
                     <span></span>
                     <span></span>
                     <span></span>
                     <span></span>
-                    A
-                </a>
-            </div>
-            <div class="link">
-                <a href="#">
+                    <img src="img/logo-codepen.png">
+                </div>
+            </a>
+            <a href="https://stackoverflow/Under3nder">
+                <div class="link">
                     <span></span>
                     <span></span>
                     <span></span>
                     <span></span>
-                    B
-                </a>
-            </div>
-            <div class="link">
-                <a href="#">
+                    <img src="img/logo-stackoverflow.png">
+                </div>
+            </a>
+            <a href="https://github.com/Under3nder">
+                <div class="link">
                     <span></span>
                     <span></span>
                     <span></span>
                     <span></span>
-                    C
-                </a>
-            </div>
-            <div class="link">
-                <a href="#">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    D
-                </a>
-            </div>
+                    <img src="img/logo-github.png">
+                </div>
+            </a>
         </div>
     </section>
     <footer>

@@ -398,7 +398,7 @@ h3 {
     aspect-ratio: 16/9;
     width: 43vw;
     box-shadow: rgba(0, 0, 0, 0.08) 0px 0px 5px;
-    border-radius: 2px;
+    border-radius: 4px;
 }
 
 .main-window .didascaly {
@@ -464,6 +464,16 @@ table {
     box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 10px;
 }
 
+tr:first-child th {
+    text-align: center;
+    font-size: 1.2em;
+    border-bottom: 1px solid grey;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    padding-bottom: 13px;
+    column-span: 2;
+}
+
 th {
     text-align: left;
 }
@@ -488,7 +498,7 @@ table td:first-child, table th:first-child {
     height: 8px;
     border-radius: 4px;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 5px;
-    width: 80%;
+    width: 0%;
 }
 
 @media screen and (max-width: 1400px) {
@@ -533,6 +543,15 @@ table td:first-child, table th:first-child {
     width: 4vw;
     height: 4vw;
     line-height: 4vw;
+}
+
+.link img {
+    width: 40%;
+    height: 40%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .link span {
