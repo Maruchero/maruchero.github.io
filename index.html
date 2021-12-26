@@ -5,216 +5,136 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Garonzi Marcello</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div id="debug" style="position: fixed;"></div>
-    <section id="welcome">
-        <div id="main-title">
-            <h1>
-                Garonzi Marcello<br>
-            </h1>
-            <h4>
-                IT student, with good habilities in frontend developing and programming.
-            </h4>
+    <nav>
+        <div onclick="openMenu()" class="button"><img src="img/icon-menu.png" alt="Menu" id="toogleMenuButton"></div>
+        <div class="button"><a href="#"><img src="img/icon-home.png" alt="Home"></a></div>
+        <div class="button"><img src="img/icon-about.png" alt="About"></div>
+        <div class="link"><a href="https://instagram.com" target="blank"><img src="img/icon-instagram.png" alt="Instagram"></a></div>
+        <div class="link"><a href="https://github.com/Under3nder" target="blank"><img src="img/icon-github.png" alt="Github"></a></div>
+    </nav>
+    <div class="menu" id="menu">
+        <div>
+            <div class="closebutton" onclick="closeMenu()">
+                <span></span>
+                <span></span>
+            </div>
         </div>
-    </section>
-    <section id="frontend">
-        <h2>
-            Frontend Developer
-        </h2>
-        <div class="my-skills">
-            <h3>
-                My skills
-            </h3>
-            <div class="cards-container">
-                <div class="card">
-                    <span class="card-title">
-                        HTML
-                    </span>
-                    <div class="circle-progress">
-                        <div class="circle-cover"></div>
-                        <div class="right-progress"></div>
-                        <div class="hide-left"></div>
-                        <div class="left-progress"></div>
-                        <div class="circle-in">
-                            <div class="progress">90<span>%</span></div>
-                        </div>
-                    </div>
+        <h1>Menu</h1>
+    </div>
+    <header>
+        <div class="text">
+            <div>
+                <h1>Garonzi Marcello</h1>
+                <p>
+                    Web developer, games developer, graphic designer, AI engeneer, fullstack developer, freelancer, tu
+                    madre, PORCODDIO
+                </p>
+            </div>
+        </div>
+        <div class="image">
+            <div class="window">
+                <div class="top">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
-                <div class="card">
-                    <span class="card-title">
-                        CSS
-                    </span>
-                    <div class="circle-progress">
-                        <div class="circle-cover"></div>
-                        <div class="right-progress"></div>
-                        <div class="hide-left"></div>
-                        <div class="left-progress"></div>
-                        <div class="circle-in">
-                            <div class="progress">80<span>%</span></div>
-                        </div>
-                    </div>
+                <span style="width: 34%;"></span>
+                <span style="width: 21%;"></span>
+                <span style="width: 9%; margin-left: 20px;"></span>
+                <span style="width: 39%; margin-left: 20px;"></span>
+                <span style="width: 27%; margin-left: 30px;"></span>
+                <span style="width: 22%;"></span>
+                <span style="width: 5%;"></span>
+            </div>
+        </div>
+    </header>
+    <div>
+        <section>
+            <div class="card slide-up">
+                <div>
+                    <h1>Python</h1>
+                    <img src="img/logo-python.png">
                 </div>
-                <div class="card">
-                    <span class="card-title">
-                        JavaScript
-                    </span>
-                    <div class="circle-progress">
-                        <div class="circle-cover"></div>
-                        <div class="right-progress"></div>
-                        <div class="hide-left"></div>
-                        <div class="left-progress"></div>
-                        <div class="circle-in">
-                            <div class="progress">60<span>%</span></div>
+                <div class="graphic">
+                    <div class="columns">
+                        <div class="background">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
                         </div>
+                        <div class="column"><span style="height: 92%;"><div class="percentage">92%</div></span></div>
+                        <div class="column"><span style="height: 97%;"><div class="percentage">97%</div></span></div>
+                    </div>
+                    <div class="names">
+                        <span>knowledge</span>
+                        <span>ability</span>
                     </div>
                 </div>
             </div>
-            <!--div class="background">
-                <img src="img/html.png">
-                <img src="img/css.png">
-                <img src="img/js.png">
-                <img src="img/html.png">
-                <img src="img/css.png">
-                <img src="img/js.png">
-                <img src="img/html.png">
-                <img src="img/css.png">
-                <img src="img/js.png">
-            <div-->
-        </div>
-        <div class="works" id="works">
-            <h3>
-                My works
-            </h3>
-            <div class="works-container">
-                <div class="work">
-                    <div class="didascaly">
-                        <div class="title">Title</div>
-                        <div class="line"></div>
-                        <div class="line"></div>
-                    </div>
-                    <div class="preview"></div>
+            <div class="card slide-up">
+                <div>
+                    <h1>Java</h1>
+                    <img src="img/logo-java.png">
                 </div>
-                <div class="work">
-                    <div class="didascaly">
-                        <div class="title">Title</div>
-                        <div class="line"></div>
-                        <div class="line"></div>
+                <div class="graphic">
+                    <div class="columns">
+                        <div class="background">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="column"><span style="height: 78%;"><div class="percentage">78%</div></span></div>
+                        <div class="column"><span style="height: 90%;"><div class="percentage">90%</div></span></div>
                     </div>
-                    <div class="preview"></div>
-                </div>
-                <div class="work">
-                    <div class="didascaly">
-                        <div class="title">Title</div>
-                        <div class="line"></div>
-                        <div class="line"></div>
+                    <div class="names">
+                        <span>knowledge</span>
+                        <span>ability</span>
                     </div>
-                    <div class="preview"></div>
                 </div>
             </div>
-            <h3>
-                CSS art
-            </h3>
-
-            <div class="codepen">
-                <button class="arrow-left" onclick="codepen_left()">
-                    <span></span>
-                    <span></span>
-                </button>
-                <div class="main-window">
-                    <a href="https://codepen.io/Under3nder/pen/jOwPJKN" id="codepen-url">
-                        <img src="img/codepen-1.png" class="window" id="codepen-img">
-                    </a>
-                    <div class="didascaly">
-                        <div class="title" id="codepen-title">animated-button</div>
-                        <div class="line"></div>
-                        <div class="line"></div>
+            <div class="card slide-up">
+                <div>
+                    <h1>Powershell</h1>
+                    <img src="img/logo-powershell.png">
+                </div>
+                <div class="graphic">
+                    <div class="columns">
+                        <div class="background">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="column"><span style="height: 54%;"><div class="percentage">54%</div></span></div>
+                        <div class="column"><span style="height: 72%;"><div class="percentage">72%</div></span></div>
+                    </div>
+                    <div class="names">
+                        <span>knowledge</span>
+                        <span>ability</span>
                     </div>
                 </div>
-                <button class="arrow-right" onclick="codepen_right()">
-                    <span></span>
-                    <span></span>
-                </button>
-                <div class="content">
-                    <!-- Here goes codepen links and images -->
-                </div>
             </div>
-
-        </div>
-    </section>
-    <section id="developer">
-        <h2>
-            Jr Software Developer
-        </h2>
-        <div class="programming-languages">
-            <table id="table">
-                <tr>
-                    <th colspan="2">
-                        Programming skill
-                    </th>
-                </tr>
-                <tr>
-                    <th>
-                        Language
-                    </th>
-                    <th>
-                        Knowledge
-                    </th>
-                </tr>
-                <tr>
-                    <td>
-                        Python
-                    </td>
-                    <td>
-                        <div class="progress-bar">
-                            <div class="progress" id="python-bar"></div>
-                            <span class="percentage" id="python-percentage">0%</span>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Java
-                    </td>
-                    <td>
-                        <div class="progress-bar">
-                            <div class="progress" id="java-bar"></div>
-                            <span class="percentage" id="java-percentage">0%</span>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        C
-                    </td>
-                    <td>
-                        <div class="progress-bar">
-                            <div class="progress" id="c-bar"></div>
-                            <span class="percentage" id="c-percentage">0%</span>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Assembly
-                    </td>
-                    <td>
-                        <div class="progress-bar">
-                            <div class="progress" id="assembly-bar"></div>
-                            <span class="percentage" id="assembly-percentage">0%</span>
-                        </div>
-                    </td>
-                </tr>
-            </table>
-        </div>
-    </section>
-    <section id="contacts">
-        <h2>
-            Contacts
-        </h2>
+        </section>
+        <section>
+            <div class="squares">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </section>
+    </div>
+    <footer>
         <div class="links">
             <a href="https://codepen.io/Under3nder">
                 <div class="link">
@@ -222,7 +142,7 @@
                     <span></span>
                     <span></span>
                     <span></span>
-                    <img src="img/logo-codepen.png">
+                    <img src="img/icon-codepen.png">
                 </div>
             </a>
             <a href="https://stackoverflow/Under3nder">
@@ -231,7 +151,7 @@
                     <span></span>
                     <span></span>
                     <span></span>
-                    <img src="img/logo-stackoverflow.png">
+                    <img src="img/icon-stackoverflow.png">
                 </div>
             </a>
             <a href="https://github.com/Under3nder">
@@ -240,18 +160,13 @@
                     <span></span>
                     <span></span>
                     <span></span>
-                    <img src="img/logo-github.png">
+                    <img src="img/icon-github.png">
                 </div>
             </a>
         </div>
-    </section>
-    <footer>
-        <div>
-            <div>Marcello Garonzi</div>
-            <a href="mailto:marce.gnz303@gmail.com">marce.gnz303@gmail.com</a>
-        </div>
     </footer>
     <script src="script.js"></script>
+    <script src="functions.js"></script>
 </body>
 
 </html>
