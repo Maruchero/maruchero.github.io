@@ -272,7 +272,7 @@ section:nth-child(1) {
 
 .card {
     /* box */
-    height: 45vh;
+    height: 350px;
     aspect-ratio: 10/12;
     padding: 20px;
     border-radius: 20px;
@@ -469,7 +469,7 @@ footer {
 
 footer .link {
     /*height: 9vh;*/
-    height: 55px;
+    height: 60px;
     aspect-ratio: 1/1;
     float: left;
     font-size: 1.5em;
