@@ -316,7 +316,7 @@ section:nth-child(1) {
     }
 }
 
-@media screen and (max-width: 140vh) {
+@media screen and (max-width: 1050px) {
     section:nth-child(1) {
         display: table;
         text-align: center;
@@ -345,7 +345,7 @@ section:nth-child(1) {
     font-family: var(--font3);
     font-size: 1em;
     /* aspect */
-    transition: .3s ease-out;
+    transition: all .3s ease-out;
     background: white;
 }
 
