@@ -199,24 +199,24 @@ header .image .window {
 
 .window span {
     display: block;
-    height: 6px;
-    margin: 4px 5px;
+    height: 4%;
+    margin: 1.5% 5px;
     background: white;
     border-radius: 2px;
 }
 
 .top {
     background: #151515;
-    height: 15px;
+    height: 10%;
     border-radius: 5px 5px 0 0;
     display: flex;
     align-items: center;
-    padding: 0 4px;
+    padding: 0 3%;
 }
 
 .top span {
     display: block;
-    height: 35%;
+    height: 37%;
     aspect-ratio: 1/1;
     border-radius: 50%;
     float: left;
