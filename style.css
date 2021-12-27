@@ -155,11 +155,24 @@ header .text {
     padding-left: 10%;
 }
 
-header .text h1 {
-    margin: 0;
+header .text div div {
+    width: max-content;
+}
+
+header .text div div h1 {
+    width: max-content;
+    margin: 0 5px;
     /* text */
     font: 700 2.6em var(--font0);
     color: rgb(15, 15, 17);
+}
+
+header .text div div span {
+    display: block;
+    height: 2px;
+    width: 100%;
+    /*background: linear-gradient(115deg, #ff72ff, #48a3ff);*/
+    background: linear-gradient(115deg, dodgerblue, limegreen);
 }
 
 header .text p {
@@ -273,7 +286,7 @@ section:nth-child(1) {
 .card {
     /* box */
     height: 350px;
-    aspect-ratio: 10/12;
+    aspect-ratio: 10/12.5;
     padding: 20px;
     border-radius: 20px;
     overflow: hidden;
@@ -378,6 +391,7 @@ section:nth-child(1) {
 
 .graphic .column span .percentage {
     position: absolute;
+    padding: 0 1px;
     background: white;
     line-height: 0.9em;
     transform: translate(-100%, -50%);
@@ -423,7 +437,6 @@ section:nth-child(2) {
     position: absolute;
     display: block;
     background: #f1f1f1;
-    box-shadow: rgba(0, 0, 0, 0.2) 0 0 10px;
 }
 
 .squares span:nth-child(1) {
@@ -431,6 +444,7 @@ section:nth-child(2) {
     bottom: 15vh;
     right: 15vh;
     transform: rotate(-55deg);
+    box-shadow: rgba(30, 144, 255, 0.3) 0 0 10px;
 }
 
 .squares span:nth-child(2) {
@@ -438,6 +452,7 @@ section:nth-child(2) {
     bottom: 47vh;
     right: 10vh;
     transform: rotate(-40deg);
+    box-shadow: rgba(153, 50, 204, 0.3) 0 0 10px;
 }
 
 .squares span:nth-child(3) {
@@ -445,6 +460,7 @@ section:nth-child(2) {
     bottom: 62vh;
     right: 32vh;
     transform: rotate(-10deg);
+    box-shadow: rgba(30, 144, 255, 0.3) 0 0 10px;
 }
 
 .squares span:nth-child(4) {
@@ -452,6 +468,7 @@ section:nth-child(2) {
     bottom: 80vh;
     right: 23vh;
     transform: rotate(45deg);
+    box-shadow: rgba(153, 50, 204, 0.3) 0 0 10px;
 }
 
 
