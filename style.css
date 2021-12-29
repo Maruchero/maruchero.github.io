@@ -373,17 +373,6 @@ section:nth-child(1) {
     aspect-ratio: 1/1;
 }
 
-@keyframes get-in {
-    0% {
-        filter: opacity(0);
-        transform: translateY(50px);
-    }
-    100% {
-        filter: opacity(1);
-        transform: translateY(0px);
-    }
-}
-
 @media screen and (max-width: 1050px) {
     section:nth-child(1) {
         display: table;
@@ -407,13 +396,14 @@ section:nth-child(1) {
     position: absolute;
     top: 0;
     left: 0;
-    transform: translateY(100%);
+    transform: translateY(50px);
     /* text */
     color: black;
     font-family: var(--font3);
     font-size: 1em;
     /* aspect */
-    transition: all .3s ease-out;
+    filter: opacity(0);
+    transition: all .3s ease;
     background: white;
 }
 
@@ -476,7 +466,8 @@ section:nth-child(1) {
 }
 
 .card:hover .graphic {
-    transform: translateY(0);
+    transform: none;
+    filter: none;
 }
 
 .card:hover {
