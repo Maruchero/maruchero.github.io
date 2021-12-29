@@ -68,6 +68,7 @@ window.onscroll = () => {
             for (j=0; j<i; j++) {
                 if (fadeOffsetTop[j] == fadeOffsetTop[i]) {
                     fadeIn[i].style.animation = "fadeIn " + time + " " + (++k * 300) + "ms ease forwards";
+                    break;
                 } else {
                     k = 0;
                 }
