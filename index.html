@@ -11,14 +11,31 @@
 
 <body>
     <div class="menu" id="menu">
-        <div>
+        <div class="topbar">
             <div class="closebutton" onclick="closeMenu()">
                 <span></span>
                 <span></span>
             </div>
         </div>
         <h1>Menu</h1>
-        .container
+        <div class="items">
+            <div class="item">
+                <div class="dropdown" onclick="toggleDropdown(0)">Works<span></span></div>
+                <div class="content">
+                    <div class="sub-item">Reaction test</div>
+                    <div class="sub-item">CPS test</div>
+                    <div class="sub-item">Fade in</div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="dropdown" onclick="toggleDropdown(1)">About<span></span></div>
+                <div class="content">
+                    <div class="sub-item">Myself</div>
+                    <div class="sub-item">My studies</div>
+                    <div class="sub-item">Contacts</div>
+                </div>
+            </div>
+        </div>
     </div>
     <header>
         <nav>
