@@ -512,13 +512,63 @@ section p {
     font-family: var(--font3);
 }
 
-.skills {
-    width: 60%;
+section:nth-child(2) .image {
+    width: 70%;
     margin: 50px 0;
     /* position */
     position: relative;
     left: 50%;
     transform: translateX(-50%);
+    /* flex */
+    display: flex;
+}
+
+.hecker {
+    width: 35%;
+    position: relative;
+}
+
+.computer {
+    width: 70%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.computer .screen {
+    aspect-ratio: 16/9;
+    background: #111;
+    margin-bottom: 10%;
+}
+
+.computer .stand {
+    width: 10%;
+    border-bottom: 6vh solid #262626;
+    border-left: 2px solid transparent;
+    border-right: 2px solid transparent;
+    /* position */
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.computer .stand::after {
+    content: "";
+    width: 5px;
+    height: calc(3vh - 10px);
+    border-radius: 2.5px;
+    background: white;
+    position: absolute;
+    top: calc(3vh - 5px);
+    left: 50%;
+    transform: translate(-50%, -100%);
+}
+
+.skills {
+    width: 64%;
+    margin-left: 3%;
 }
 
 .skill {

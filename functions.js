@@ -47,7 +47,7 @@ let tempDropdowns = document.getElementsByClassName("dropdown");
 let dropdowns = [];
 for (i=0; i<tempDropdowns.length; i++) {
     // get span element to rotate it
-    dropdowns.push(tempDropdowns[i].lastChild);
+    dropdowns.push(tempDropdowns[i].children[0]);
 }
 
 function toggleDropdown(n) {
