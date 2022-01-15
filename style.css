@@ -379,7 +379,6 @@ section:nth-child(1) {
     overflow: hidden;
     /* aspect */
     box-shadow: rgba(0, 0, 0, 0.2) 0 0 10px 1px;
-    filter: opacity(0);
     text-align: center;
 }
 
@@ -421,7 +420,7 @@ section:nth-child(1) {
     font-family: var(--font3);
     font-size: 1em;
     /* aspect */
-    filter: opacity(0);
+    opacity: 0;
     transition: all .3s ease;
     background: white;
 }
@@ -486,7 +485,7 @@ section:nth-child(1) {
 
 .card:hover .graphic {
     transform: none;
-    filter: none;
+    opacity: initial;
 }
 
 .card:hover {
@@ -512,9 +511,15 @@ section p {
     font-family: var(--font3);
 }
 
+.image-container {
+    height: 100%;
+    padding: 50px 0;
+    box-sizing: border-box;
+    position: relative;
+}
+
 section:nth-child(2) .image {
     width: 70%;
-    margin: 50px 0;
     /* position */
     position: relative;
     left: 50%;
