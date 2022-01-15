@@ -1,31 +1,3 @@
-function selector(type) {
-    let _html, _css, _js;
-    _html = [];
-    _css = [];
-    _js = [];
-
-    // Set type of information to use
-    let used;
-    switch (type) {
-        case "html":
-            used = _css;
-            break
-        case "js":
-            used = _js;
-            break
-        default:
-            used = "html";
-    }
-
-    // Get elements list
-    let elements = [];
-    elements.push(document.getElementById("language"));
-    // Fill elements
-    for (i=0; i<elements.length; i++) {
-
-    }
-}
-
 // ******************************************************************************
 // MENU
 
