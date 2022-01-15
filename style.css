@@ -394,18 +394,24 @@ header .image:hover .window {
 }
 
 .card-3d {
-    --h: 200px;
-    --m: 30px;
+    --h: 200;
+    --m: 30;
 
-    width: 165px;
-    height: var(--h);
-    margin-top: var(--m);
+    width: 12vw;
+    height: calc(var(--h) * 0.0732vw);
+    margin-top: calc(var(--m) * 0.0732vw);
     padding: 20px;
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.05) 6px 10px 12px;
     background: radial-gradient(#fefefe, #fcfcfc);
     display: block;
     text-align: center;
+    transition: all 150ms linear;
+}
+
+.card-3d:hover {
+    transform: translate(-12px, -20px);
+    box-shadow: rgba(0, 0, 0, 0.08) 18px 30px 20px;
 }
 
 .card-3d .title {
@@ -418,10 +424,6 @@ header .image:hover .window {
     aspect-ratio: 1/1;
     margin: auto;
     margin-top: 20px;
-    /*background: radial-gradient(farthest-side, rgb(49, 152, 255), orchid) -100px -100px no-repeat;
-    background-size: 170% 170%;
-    border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.1) 6px 8px 10px;*/
 }
 
 .card-3d span {
@@ -441,9 +443,9 @@ header .image:hover .window {
 
     /* gradients */
     --g1: linear-gradient(285deg,  #e79931, #dae71f);
-    --g2: linear-gradient(285deg,  #2894ff, #76eaff);
-    --g3: linear-gradient(285deg,  #06ad0e, #7fee35);
-    /*--g3: linear-gradient(105deg,  #d44bd4, #e65252);*/
+    --g2: linear-gradient(285deg,  #06ad0e, #7fee35);
+    --g3: linear-gradient(285deg,  #2894ff, #76eaff);
+    /*--g1: linear-gradient(105deg,  #e681ff, #502fac);*/
 }
 
 .programming-languages .left {
@@ -462,11 +464,12 @@ header .image:hover .window {
 
 .programming-languages .left .legend .color {
     display: inline-block;
-    height: .6em;
-    aspect-ratio: 1/1;
+    height: .62em;
+    aspect-ratio: 1;
     margin-right: 10px;
     border-radius: 3px;
     border: 1px solid #555;
+    background-size: 150% 150%;
 }
 
 .programming-languages .left .legend-line:nth-child(1) span {
@@ -513,7 +516,7 @@ header .image:hover .window {
     height: 100%;
     margin: 0 7px;
     border-radius: 5px 5px 0 0;
-    box-shadow: rgba(0, 0, 0, 0.15) 0 0 5px;
+    transition: all 100ms;
 }
 
 .right .chart .column-group div span {
@@ -523,6 +526,16 @@ header .image:hover .window {
     font: normal 0.85em var(--font0);
     text-align: center;
     line-height: 0.85em;
+    transition: all 100ms;
+}
+
+/* hover */
+.right .chart .column-group div:hover {
+    box-shadow: rgba(0, 0, 0, 0.2) 0 0 7px;
+}
+
+.right .chart .column-group div:hover span {
+    font-size: 1em;
 }
 
 .right .chart .column-group .skill {
@@ -542,6 +555,16 @@ header .image:hover .window {
     text-align: center;
     padding: 10px;
     border-top: 1px solid #000;
+}
+
+@media screen and (max-width: 800px) {
+    .programming-languages {
+        display: initial;
+    }
+    .programming-languages .right {
+        height: 100vh;
+        box-sizing: border-box;
+    }
 }
 
 
