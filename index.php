@@ -10,6 +10,31 @@
 </head>
 
 <body>
+    <?php
+    $filename = "data.json";
+    $data = array();
+
+    // Read data from the file $filename
+    if (file_exists($filename)) {
+        $file = fopen($filename, "r");
+        $stringFile = fread($file, filesize($filename));
+        fclose($file);
+
+        // Set data dictionary content
+        $data = json_decode($stringFile, true);
+    } else {
+        $data = array("views" => 0);
+    }
+
+    // Update data
+    $data["views"] += 1;
+
+    // Save data updated content
+    $file = fopen($filename, "w");
+    fwrite($file, json_encode($data) . "\n");
+    fclose($file);
+    ?>
+
     <div class="menu" id="menu">
         <div class="topbar">
             <div class="closebutton" onclick="closeMenu()">
@@ -61,6 +86,13 @@
                 <a href="https://github.com/Under3nder" target="blank"><img src="img/icon-github.svg"
                         alt="Github" /></a>
             </div>
+            <div class="link">
+                <span style="font-family:Consolas">
+                    <?php
+                    echo("visitor: #" . $data["views"]);
+                    ?>
+                </span>
+            </div>
         </nav>
 
         <div class="header-container">
@@ -101,7 +133,7 @@
             <div class="cards-3d-screen">
                 <div class="cards-3d-container">
                     <div class="cards-3d-line">
-                        <div class="card-3d" style="--h:180; --m:340">
+                        <div class="card-3d" style="--h:180; --m:200">
                             <span style="width: 65%;"></span>
                             <span style="width: 50%;"></span>
                         </div>
@@ -116,7 +148,7 @@
                         </div>
                     </div>
                     <div class="cards-3d-line">
-                        <div class="card-3d" style="--h:200; --m:160">
+                        <div class="card-3d" style="--h:200; --m:100">
                             <div class="title">Assembly</div>
                             <img src="img/logo-assembly.png">
                         </div>
