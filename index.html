@@ -10,31 +10,6 @@
 </head>
 
 <body>
-    <?php
-    $filename = "data.json";
-    $data = array();
-
-    // Read data from the file $filename
-    if (file_exists($filename)) {
-        $file = fopen($filename, "r");
-        $stringFile = fread($file, filesize($filename));
-        fclose($file);
-
-        // Set data dictionary content
-        $data = json_decode($stringFile, true);
-    } else {
-        $data = array("views" => 0);
-    }
-
-    // Update data
-    $data["views"] += 1;
-
-    // Save data updated content
-    $file = fopen($filename, "w");
-    fwrite($file, json_encode($data) . "\n");
-    fclose($file);
-    ?>
-
     <div class="menu" id="menu">
         <div class="topbar">
             <div class="closebutton" onclick="closeMenu()">
@@ -85,13 +60,6 @@
             <div class="link">
                 <a href="https://github.com/Under3nder" target="blank"><img src="img/icon-github.svg"
                         alt="Github" /></a>
-            </div>
-            <div class="link">
-                <span style="font-family:Consolas">
-                    <?php
-                    echo("visitor: #" . $data["views"]);
-                    ?>
-                </span>
             </div>
         </nav>
 
