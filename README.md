@@ -4,7 +4,7 @@
 ![Language](https://img.shields.io/badge/-CSS-blue)
 ![Language](https://img.shields.io/badge/-JS-yellow)
 
-Hi, whit is my website repository, to see the result go on [maruchero.github.io](maruchero.github.io). I hope you like it.
+Hi, whit is my website repository, to see the result go on [https://maruchero.github.io](maruchero.github.io). I hope you like it.
 If you find some issues feel free to contact me at my [email](#contacts) down below
 
 ## Content
