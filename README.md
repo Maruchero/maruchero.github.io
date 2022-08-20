@@ -3,9 +3,8 @@
 ![Language](https://img.shields.io/badge/-HTML-red)
 ![Language](https://img.shields.io/badge/-CSS-blue)
 ![Language](https://img.shields.io/badge/-JS-yellow)
-![Language](https://img.shields.io/badge/Web-Developement-green)
 
-Hi, whit is my website repository, to see the result go on [under3nder.github.io](under3nder.github.io). I hope you like it.
+Hi, whit is my website repository, to see the result go on [maruchero.github.io](maruchero.github.io). I hope you like it.
 If you find some issues feel free to contact me at my [email](#contacts) down below
 
 ## Content
