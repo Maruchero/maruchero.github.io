@@ -1,7 +1,7 @@
 /* Global fonts and variables */
 @font-face {
   font-family: cubano;
-  src: url("fonts/cubano.ttf") format("truetype");
+  src: url("fonts/Cubano.ttf") format("truetype");
 }
 
 @font-face {
@@ -25,8 +25,20 @@
   font-weight: 400;
 }
 
+@font-face {
+  font-family: "Cera Round";
+  src: url("fonts/Cera\ Round\ Pro\ Bold.otf") format("opentype");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Cera Round";
+  src: url("fonts/CeraRoundProBlack.otf") format("opentype");
+  font-weight: 700;
+}
+
 :root {
-  --font-title: cubano, Bariol_Bold;
+  --font-title: cubano, sans-serif;
   --font-content: "Cera Round", Gotham, sans-serif;
   --font-mono: Consolas, FiraCode, monospace;
   --font-special: "Cera Round", cursive;
