@@ -1,0 +1,174 @@
+/* Global fonts and variables */
+@font-face {
+  font-family: cubano;
+  src: url("fonts/cubano.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: FiraCode;
+  src: url("fonts/FiraCode-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Gotham;
+  src: url("fonts/GothamMedium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Sofia Pro";
+  src: url("fonts/Sofia\ Pro\ Regular\ Az.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Cera Round";
+  src: url("fonts/CeraRoundProRegular.otf") format("opentype");
+  font-weight: 400;
+}
+
+:root {
+  --font-title: cubano, Bariol_Bold;
+  --font-content: "Cera Round", Gotham, sans-serif;
+  --font-mono: Consolas, FiraCode, monospace;
+  --font-special: "Cera Round", cursive;
+
+  --color-text: #fff;
+  --color-title: #fff5f9;
+  --color-subtitle: #bbb;
+
+  --color-background: rgb(25, 25, 30);
+  --color-lighter-background: rgb(34, 34, 39);
+
+  --shadow-raise-1: 0 0 10px #0001;
+  --shadow-raise-2: 0 0 10px #0002;
+  --shadow-raise-3: 0 0 10px #0005;
+}
+
+/* Global tags */
+body {
+  margin: 0;
+  background: var(--color-background);
+  font-family: var(--font-content);
+  font-size: 1.5rem;
+  color: var(--color-text);
+}
+
+code {
+  font-family: var(--font-mono);
+  color: var(--color-text);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 4rem;
+  background: var(--color-lighter-background);
+  box-shadow: var(--shadow-raise-3);
+  padding: 0 1rem;
+  box-sizing: border-box;
+  font-size: 1.1rem;
+}
+
+section {
+  position: relative;
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: inherit;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-family: var(--font-title);
+  font-size: 3.5rem;
+  color: var(--color-title);
+}
+
+/* Global classes */
+.fade-in {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.3s ease-in-out;
+}
+
+.fade-in.active {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.nav-left,
+.nav-right {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-element {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+}
+
+.raise-3 {
+  box-shadow: var(--shadow-raise-3);
+}
+
+.circle {
+  display: block;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+
+.bg-image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: var(--color-subtitle);
+}
+
+.typing-animation {
+  /*animation: typing-animation 2s linear forwards;*/
+  display: block;
+  box-sizing: border-box;
+  /*width: 0;*/
+  overflow: hidden;
+  text-overflow: clip;
+  white-space: nowrap;
+}
+
+@keyframes typing-animation {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+/*****************************************************************************/
+/* Sections ******************************************************************/
+
+/* Landing section - alias: section 1 */
+#landing-section #welcome {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: max-content;
+  text-align: center;
+}
+
+#landing-section #welcome p {
+  width: 45rem;
+  max-width: 80vw;
+}
