@@ -41,7 +41,7 @@
   --font-title: cubano, sans-serif;
   --font-content: "Cera Round", Gotham, sans-serif;
   --font-mono: Consolas, FiraCode, monospace;
-  --font-special: "Cera Round", cursive;
+  --font-special: "Sofia Pro", cursive;
 
   --color-text: #fff;
   --color-title: #fff5f9;
@@ -50,9 +50,14 @@
   --color-background: rgb(25, 25, 30);
   --color-lighter-background: rgb(34, 34, 39);
 
+  --color-border: rgb(29, 29, 29);
+
+  --color-highlight: dodgerblue;
+
   --shadow-raise-1: 0 0 10px #0001;
   --shadow-raise-2: 0 0 10px #0002;
   --shadow-raise-3: 0 0 10px #0005;
+  --shadow-light-1: 0 0 130px -20px rgba(255, 255, 255, 0.034);
 }
 
 /* Global tags */
@@ -62,6 +67,11 @@ body {
   font-family: var(--font-content);
   font-size: 1.5rem;
   color: var(--color-text);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 code {
@@ -92,26 +102,37 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: inherit;
+  font-family: var(--font-title);
+  color: var(--color-title);
 }
 
 h1 {
   text-transform: uppercase;
-  font-family: var(--font-title);
   font-size: 3.5rem;
-  color: var(--color-title);
 }
 
 /* Global classes */
 .fade-in {
   opacity: 0;
   transform: translateY(50px);
-  transition: all 0.3s ease-in-out;
 }
 
 .fade-in.active {
-  opacity: 1;
-  transform: translateY(0px);
+  animation: fade-in 1s ease-out forwards;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  40% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
 
 .nav-left,
@@ -183,4 +204,88 @@ h1 {
 #landing-section #welcome p {
   width: 45rem;
   max-width: 80vw;
+}
+
+/* Projects section - alias: section 2 */
+#favourites-projects {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#favourites-projects .slider {
+  width: max-content;
+  margin-top: 20px;
+  display: grid;
+  grid-column-gap: 20px;
+  grid-template-columns: 50px auto 50px;
+  align-items: center;
+}
+
+#favourites-projects .slider .arrow-left,
+#favourites-projects .slider .arrow-right {
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+#favourites-projects .slider .arrow-left {
+  text-align: right;
+}
+
+#favourites-projects .slider-container {
+  position: relative;
+
+  height: min(70vh, 40vw);
+  aspect-ratio: 8/5;
+  border-radius: 10px;
+  overflow: hidden;
+
+  background: var(--color-lighter-background);
+  box-shadow: var(--shadow-raise-2), var(--shadow-light-1);
+}
+
+#favourites-projects .slider-content {
+  position: absolute;
+  width: max-content;
+  height: 100%;
+
+  display: grid;
+  grid-template-columns: auto;
+  grid-auto-flow: column;
+
+  left: 0;
+  transition: left .5s cubic-bezier(0.4, 0.38, 0.23, 0.77);
+}
+
+#favourites-projects .slider-content .content {
+  box-sizing: border-box;
+  padding: 20px;
+  height: 100%;
+  aspect-ratio: 8/5;
+
+  display: grid;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  grid-template-columns: auto 50%;
+}
+
+#favourites-projects .slider .project-preview {
+  background-image: url(img/logo.svg);
+  height: 100%;
+  border-radius: 10px;
+  border: 3px solid var(--color-border);
+  box-shadow: var(--shadow-raise-1);
+}
+
+#favourites-projects .button {
+  display: block;
+  width: max-content;
+  padding: 7px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  background: var(--color-highlight);
+  box-shadow: var(--shadow-raise-2);
+  font-family: var(--font-special);
+  font-weight: 600;
 }

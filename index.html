@@ -1,22 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Garonzi Marcello - Portfolio</title>
+
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
 </head>
+
 <body>
   <section id="landing-section">
     <nav>
       <div class="nav-left"></div>
       <div class="nav-right">
-        <span class="nav-element">Github</span>
-        <span class="nav-element">StackOverflow</span>
+        <a class="nav-element" href="https://github.com/Maruchero/">Github</a>
+        <a class="nav-element" href="https://stackoverflow.com/users/16529391/">StackOverflow</a>
         <div class="nav-element">
-          <span class="circle bg-image raise-3" id="nav-user-link" style="height: 2.5rem; background-image: url(img/logo.svg);"></span>
+          <span class="circle bg-image raise-3" id="nav-user-link"
+            style="height: 2.5rem; background-image: url(img/logo.svg);"></span>
         </div>
       </div>
     </nav>
@@ -27,5 +36,43 @@
       </p>
     </div>
   </section>
+
+  <section id="favourites-projects">
+    <h2>My Favourite Projects</h2>
+    <div class="slider" id="project-slider">
+      <div class="arrow-left" onclick="projectSlider.previous()"><i class="fa-solid fa-chevron-left"></i></div>
+      <div class="slider-container">
+        <div class="slider-content">
+          <div class="content">
+            <span class="bg-image project-preview"></span>
+            <div>
+              <div class="description">
+                <h3>Project Title</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod repudiandae odio eligendi iure possimus
+                  neque enim dolorum laudantium.</p>
+              </div>
+              <a href="project/url/goback" class="button">Try it</a>
+            </div>
+          </div>
+          <div class="content">
+            <span class="bg-image project-preview" style="transform: scaleX(-1);"></span>
+            <div>
+              <div class="description">
+                <h3>Project 2</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure facilis odit, nisi similique modi
+                  laudantium voluptatum debitis quibusdam officia.</p>
+              </div>
+              <a href="project/url/goback" class="button">Try it</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="arrow-right" onclick="projectSlider.next()"><i class="fa-solid fa-chevron-right"></i></div>
+    </div>
+  </section>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
 </body>
+
 </html>
