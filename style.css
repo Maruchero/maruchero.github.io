@@ -49,6 +49,7 @@
 
   --color-background: rgb(25, 25, 30);
   --color-lighter-background: rgb(34, 34, 39);
+  --color-super-lighter-background: rgb(38, 38, 44);
 
   --color-border: rgb(29, 29, 29);
 
@@ -213,6 +214,7 @@ h1 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-bottom: 15vh;
 }
 
 #favourites-projects .slider {
@@ -236,7 +238,7 @@ h1 {
 #favourites-projects .slider-container {
   position: relative;
 
-  height: min(70vh, 40vw);
+  height: min(60vh, 40vw);
   aspect-ratio: 8/5;
   border-radius: 10px;
   overflow: hidden;
@@ -255,7 +257,7 @@ h1 {
   grid-auto-flow: column;
 
   left: 0;
-  transition: left .5s cubic-bezier(0.4, 0.38, 0.23, 0.77);
+  transition: left 0.5s cubic-bezier(0.4, 0.38, 0.23, 0.77);
 }
 
 #favourites-projects .slider-content .content {
@@ -288,4 +290,125 @@ h1 {
   box-shadow: var(--shadow-raise-2);
   font-family: var(--font-special);
   font-weight: 600;
+}
+
+/* Skills section - alias: section 3 */
+#skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20vh;
+}
+
+#skills h2 {
+  margin-bottom: 3rem;
+}
+
+#skills h3,
+#skills h4 {
+  margin: 0;
+}
+
+#skills .cards-list {
+  box-sizing: border-box;
+  width: 90%;
+
+  padding: 20px 30px;
+  padding-bottom: 0;
+  border-radius: 10px;
+  margin-bottom: 50px;
+
+  background: var(--color-lighter-background);
+}
+
+#skills .cards-list ul {
+  list-style: none;
+  padding: 0;
+
+  overflow-x: auto;
+
+  display: flex;
+  gap: 30px;
+}
+
+#skills .cards-list .card {
+  box-sizing: border-box;
+
+  padding: 20px;
+  border-radius: 10px;
+
+  background: var(--color-super-lighter-background);
+  box-shadow: var(--shadow-raise-2);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#skills .circular-progress {
+  margin-top: 20px;
+
+  position: relative;
+  width: 12rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+
+  background: conic-gradient(
+    var(--color) calc(var(--percentage) * 3.6deg),
+    var(--color-lighter-background) calc(var(--percentage) * 3.6deg)
+  );
+  box-shadow: var(--shadow-raise-2);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#skills .circular-progress::after {
+  content: "";
+  background: var(--color);
+  width: 12.5%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#skills .circular-progress .center {
+  position: absolute;
+  height: 75%;
+  width: 75%;
+  border-radius: 50%;
+
+  background: var(--color-super-lighter-background);
+  box-shadow: inset var(--shadow-raise-3);
+}
+
+#skills .circular-progress .center::after {
+  counter-reset: percentage var(--percentage);
+  content: counter(percentage) '%';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#skills .circular-progress .after {
+  height: 100%;
+  width: 12.5%;
+  
+  position: absolute;
+  transform: rotate(calc(var(--percentage) * 3.6deg));
+}
+
+#skills .circular-progress .after::after {
+  content: "";
+  background: var(--color);
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  position: absolute;
 }

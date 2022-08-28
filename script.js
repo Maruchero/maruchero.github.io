@@ -23,7 +23,5 @@ class Slider {
   }
 }
 
-
-
 // Main
 const projectSlider = new Slider("#project-slider");
