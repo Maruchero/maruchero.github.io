@@ -193,7 +193,7 @@ h1 {
 /*****************************************************************************/
 /* Sections ******************************************************************/
 
-/* Landing section - alias: section 1 */
+/* Landing section */
 #landing-section #welcome {
   position: absolute;
   top: 50%;
@@ -208,7 +208,74 @@ h1 {
   max-width: 80vw;
 }
 
-/* Projects section - alias: section 2 */
+/* Presentation section */
+#presentation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15vh;
+}
+
+#presentation .card {
+  box-sizing: border-box;
+  height: min(70vh, 47vw);
+  aspect-ratio: 8/5;
+
+  border-radius: 10px;
+  padding: 10px;
+  background: var(--color-lighter-background);
+  box-shadow: var(--shadow-light-1), var(--shadow-raise-2);
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#presentation .card .left,
+#presentation .card .right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  max-width: 40vw;
+}
+
+#presentation table td {
+  padding-bottom: 15px;
+}
+
+#presentation table td:first-child {
+  font-weight: 600;
+}
+
+#presentation table td:not(:nth-child(1)) {
+  padding-left: 25px;
+}
+
+#presentation .profile-image {
+  box-sizing: border-box;
+  width: 90%;
+  height: 80%;
+  position: relative;
+
+  border-radius: 10px;
+  border: 3px solid var(--color-border);
+
+  background-image: url(img/profile-photo.jpg);
+  box-shadow: var(--shadow-raise-1);
+}
+
+#presentation .best-photo-so-far {
+  width: 60%;
+  transform: rotate(3deg);
+  filter: invert(1);
+
+  position: absolute;
+  top: 65%;
+  left: 83%;
+}
+
+/* Projects section */
 #favourites-projects {
   height: 100vh;
   display: flex;
@@ -254,7 +321,7 @@ h1 {
   height: 100%;
 
   display: grid;
-  grid-template-columns: auto;
+  grid-template-columns: repeat(auto-fill, 1fr);
   grid-auto-flow: column;
 
   left: 0;
@@ -293,7 +360,7 @@ h1 {
   font-weight: 600;
 }
 
-/* Skills section - alias: section 3 */
+/* Skills section */
 #skills {
   display: flex;
   flex-direction: column;
