@@ -50,6 +50,7 @@
   --color-background: rgb(25, 25, 30);
   --color-lighter-background: rgb(34, 34, 39);
   --color-super-lighter-background: rgb(40, 40, 46);
+  --color-scrollbar: rgb(68, 68, 68);
 
   --color-border: rgb(29, 29, 29);
 
@@ -59,6 +60,27 @@
   --shadow-raise-2: 0 0 10px #0002;
   --shadow-raise-3: 0 0 10px #0005;
   --shadow-light-1: 0 0 200px -20px rgba(255, 255, 255, 0.034);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-super-lighter-background);
+  box-shadow: var(--shadow-raise-3);
+  border-radius: 2.5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-scrollbar);
+  border-radius: 2.5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-highlight);
 }
 
 /* Global tags */
@@ -212,7 +234,6 @@ h1 {
 
 /* Presentation section */
 @media screen and (max-width: 767px) {
-  
 }
 
 #presentation {
@@ -346,6 +367,7 @@ h1 {
 }
 
 #favourites-projects .slider .project-preview {
+  box-sizing: border-box;
   background-image: url(img/logo.svg);
   height: 100%;
   border-radius: 10px;
@@ -353,9 +375,21 @@ h1 {
   box-shadow: var(--shadow-raise-1);
 }
 
+#favourites-projects .slider .description {
+  display: grid;
+  grid-template-rows: auto max-content repeat(100, auto);
+  overflow: hidden;
+}
+
+#favourites-projects .slider .description div {
+  overflow: auto;
+}
+
 #favourites-projects .button {
   display: block;
   width: max-content;
+
+  margin-top: 20px;
   padding: 7px 20px;
   cursor: pointer;
   border-radius: 5px;
@@ -443,7 +477,7 @@ h1 {
   width: 12.5%;
   aspect-ratio: 1;
   border-radius: 50%;
-  
+
   position: absolute;
   top: 0;
   left: 50%;
@@ -462,7 +496,7 @@ h1 {
 
 #skills .circular-progress .center::after {
   counter-reset: percentage var(--percentage);
-  content: counter(percentage) '%';
+  content: counter(percentage) "%";
   position: absolute;
   top: 50%;
   left: 50%;
@@ -472,7 +506,7 @@ h1 {
 #skills .circular-progress .after {
   height: 100%;
   width: 12.5%;
-  
+
   position: absolute;
   transform: rotate(calc(var(--percentage) * 3.6deg));
 }
