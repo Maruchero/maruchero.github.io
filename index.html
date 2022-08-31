@@ -15,6 +15,7 @@
 
   <title>Garonzi Marcello - Portfolio</title>
 
+  <link rel="stylesheet" href="/styles.css">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
     integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
@@ -31,7 +32,7 @@
         <a class="nav-element" href="https://github.com/Maruchero/">Github</a>
         <a class="nav-element" href="https://stackoverflow.com/users/16529391/">StackOverflow</a>
         <div class="nav-element">
-          <span class="circle bg-image raise-3" id="nav-user-link"
+          <span class="circle bg-image" id="nav-user-link"
             style="height: 2.5rem; background-image: url(img/logo.svg);"></span>
         </div>
       </div>
@@ -86,25 +87,23 @@
       <div class="slider-container">
         <div class="slider-content">
           <div class="content">
-            <span class="bg-image project-preview"></span>
+            <span class="bg-image project-preview" style="background-image: url(img/P4Password-logo.png);"></span>
             <div class="description">
               <div>
-                <h3>Project Title</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod repudiandae odio eligendi iure possimus
-                  neque enim dolorum laudantium.</p>
+                <h3>P4Password</h3>
+                <p>A simple offline password protector, with a very cool design and constantly updated security features.</p>
               </div>
-              <a href="project/url/goback" class="button">Try it</a>
+              <a href="https://github.com/Maruchero/P4Password/" class="button">Try it <i class="fa-solid fa-arrow-right" style="font-size: .8em"></i></a>
             </div>
           </div>
           <div class="content">
-            <span class="bg-image project-preview" style="transform: scaleX(-1);"></span>
+            <span class="bg-image project-preview" style="background-image: url(img/browser-custom-home.jpg);"></span>
             <div class="description">
               <div>
-                <h3>Project 2</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure facilis odit, nisi similique modi
-                  laudantium voluptatum debitis quibusdam officia.</p>
+                <h3>Browser Home</h3>
+                <p>Customizable browser home page. Uses cookies to store user settings.</p>
               </div>
-              <a href="project/url/goback" class="button">Try it</a>
+              <a href="https://maruchero.github.io/BrowserCustomHome/" class="button">Try it <i class="fa-solid fa-arrow-right" style="font-size: .8em"></i></a>
             </div>
           </div>
         </div>
@@ -115,6 +114,9 @@
 
   <section id="skills">
     <h2>My Skills</h2>
+    <p class="subtitle">
+      Those are my principal skills, the percentages are a representative number of the deepness of the knowledge, the practicity in using that and the confidence.
+    </p>
     <div class="cards-list">
       <h3>Fullstack developer</h3>
       <ul>
@@ -134,14 +136,14 @@
         </li>
         <li class="card">
           <h4>JavaScript</h4>
-          <div class="circular-progress" style="--color: rgb(255, 204, 103); --percentage: 96;">
+          <div class="circular-progress" style="--color: rgb(255, 204, 103); --percentage: 92;">
             <div class="center"></div>
             <div class="after"></div>
           </div>
         </li>
         <li class="card">
           <h4>PHP</h4>
-          <div class="circular-progress" style="--color: rgb(175, 94, 255); --percentage: 79;">
+          <div class="circular-progress" style="--color: rgb(175, 94, 255); --percentage: 73;">
             <div class="center"></div>
             <div class="after"></div>
           </div>
@@ -167,14 +169,14 @@
         </li>
         <li class="card">
           <h4>Django</h4>
-          <div class="circular-progress" style="--color: rgb(255, 245, 233); --percentage: 76;">
+          <div class="circular-progress" style="--color: rgb(255, 210, 0); --percentage: 76;">
             <div class="center"></div>
             <div class="after"></div>
           </div>
         </li>
         <li class="card">
           <h4>Spring Boot</h4>
-          <div class="circular-progress" style="--color: rgb(68, 255, 130); --percentage: 42;">
+          <div class="circular-progress" style="--color: rgb(18, 233, 90); --percentage: 42;">
             <div class="center"></div>
             <div class="after"></div>
           </div>
@@ -185,15 +187,22 @@
       <h3>Programming Languages</h3>
       <ul>
         <li class="card">
-          <h4>Python</h4>
-          <div class="circular-progress" style="--color: rgb(239, 236, 84); --percentage: 96;">
+          <h4>Java</h4>
+          <div class="circular-progress" style="--color: rgb(252, 127, 45); --percentage: 89;">
             <div class="center"></div>
             <div class="after"></div>
           </div>
         </li>
         <li class="card">
-          <h4>Java</h4>
-          <div class="circular-progress" style="--color: rgb(255, 203, 144); --percentage: 89;">
+          <h4>Python</h4>
+          <div class="circular-progress" style="--color: rgb(239, 236, 84); --percentage: 93;">
+            <div class="center"></div>
+            <div class="after"></div>
+          </div>
+        </li>
+        <li class="card">
+          <h4>Powershell</h4>
+          <div class="circular-progress" style="--color: rgb(99, 206, 255); --percentage: 68;">
             <div class="center"></div>
             <div class="after"></div>
           </div>
@@ -208,13 +217,6 @@
         <li class="card">
           <h4>Bash</h4>
           <div class="circular-progress" style="--color: rgb(148, 51, 181); --percentage: 57;">
-            <div class="center"></div>
-            <div class="after"></div>
-          </div>
-        </li>
-        <li class="card">
-          <h4>Powershell</h4>
-          <div class="circular-progress" style="--color: rgb(99, 206, 255); --percentage: 49;">
             <div class="center"></div>
             <div class="after"></div>
           </div>

@@ -1,0 +1,186 @@
+/* Global fonts and variables */
+@font-face {
+  font-family: cubano;
+  src: url("fonts/Cubano.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Sofia Pro";
+  src: url("fonts/Sofia\ Pro\ Regular\ Az.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Cera Round";
+  src: url("fonts/CeraRoundProRegular.otf") format("opentype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Cera Round";
+  src: url("fonts/Cera\ Round\ Pro\ Bold.otf") format("opentype");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Cera Round";
+  src: url("fonts/CeraRoundProBlack.otf") format("opentype");
+  font-weight: 700;
+}
+
+:root {
+  --font-title: cubano, cursive;
+  --font-content: "Cera Round", "Sofia Pro", sans-serif;
+  --font-mono: Consolas, monospace;
+  --font-special: "Sofia Pro", cursive;
+
+  --color-text: #fff;
+  --color-title: #fff5f9;
+  --color-subtitle: #bbb;
+
+  --color-background: rgb(25, 25, 30);
+  --color-lighter-background: rgb(34, 34, 39);
+  --color-super-lighter-background: rgb(40, 40, 46);
+  --color-scrollbar: rgb(68, 68, 68);
+
+  --color-border: rgb(29, 29, 29);
+
+  --color-highlight: dodgerblue;
+
+  --shadow-raise-1: 0 0 10px #0001;
+  --shadow-raise-2: 0 0 10px #0002;
+  --shadow-raise-3: 0 0 10px #0005;
+  --shadow-light-1: 0 0 200px -20px rgba(255, 255, 255, 0.034);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-super-lighter-background);
+  box-shadow: var(--shadow-raise-3);
+  border-radius: 2.5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-scrollbar);
+  border-radius: 2.5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-highlight);
+}
+
+/* Global tags */
+body {
+  margin: 0;
+  background: var(--color-background);
+  
+  font-family: var(--font-content);
+  font-size: 1.5rem;
+  color: var(--color-text);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+code {
+  font-family: var(--font-mono);
+  color: var(--color-text);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+
+  width: 100%;
+  height: 4rem;
+
+  background: var(--color-lighter-background);
+  box-shadow: var(--shadow-raise-3);
+
+  position: relative;
+  box-sizing: border-box;
+  padding: 0 2rem;
+
+  font-size: 1.1rem;
+}
+
+section {
+  position: relative;
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-title);
+  color: var(--color-title);
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 3.5rem;
+}
+
+/* Global classes */
+.fade-in {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.fade-in.active {
+  animation: fade-in 1s ease-out forwards;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  40% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.nav-left,
+.nav-right {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-element {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+}
+
+.circle {
+  display: block;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  box-shadow: var(--shadow-raise-3);
+}
+
+.bg-image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: var(--color-subtitle);
+}
