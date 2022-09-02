@@ -146,7 +146,7 @@
   box-sizing: border-box;
   height: 100%;
   aspect-ratio: 8/5;
-  
+
   padding: 20px;
 
   display: grid;
@@ -161,7 +161,7 @@
 
   border-radius: 10px;
   border: 3px solid var(--color-border);
-  
+
   background-image: url(img/logo.svg);
   box-shadow: var(--shadow-raise-1);
 }
@@ -187,7 +187,7 @@
   cursor: pointer;
   background: var(--color-highlight);
   box-shadow: var(--shadow-raise-2);
-  
+
   font-family: var(--font-special);
   font-weight: 600;
 }
