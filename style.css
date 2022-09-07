@@ -316,3 +316,19 @@
   border-radius: 50%;
   position: absolute;
 }
+
+/* Contacts */
+#contacts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#contacts table td {
+  padding: 10px;
+}
+
+#contacts a {
+  text-decoration: underline;
+}
