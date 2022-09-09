@@ -73,7 +73,7 @@
   border-radius: 10px;
   border: 3px solid var(--color-border);
 
-  background-image: url(img/profile-photo.jpg);
+  background-image: url(img/profile-photo.webp);
   box-shadow: var(--shadow-raise-1);
 }
 
