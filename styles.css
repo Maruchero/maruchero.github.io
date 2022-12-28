@@ -109,6 +109,7 @@ nav {
   box-shadow: var(--shadow-raise-3);
 
   position: relative;
+  z-index: 100;
   box-sizing: border-box;
   padding: 0 2rem;
 

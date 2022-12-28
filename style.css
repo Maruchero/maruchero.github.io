@@ -4,10 +4,10 @@
   height: 100vh;
   position: absolute;
   z-index: 1;
+  overflow: hidden;
 
-  filter: invert(1);
-  -webkit-mask-image: radial-gradient(ellipse at 50%, #0000000a, #0000 70%);
-  mask-image: radial-gradient(ellipse at 50%, #0000000a, #0000 70%);
+  -webkit-mask-image: radial-gradient(ellipse at 50%, #000000, #0000 70%);
+  mask-image: radial-gradient(ellipse at 50%, #000000, #0000 70%);
 }
 
 #background span {
@@ -18,6 +18,8 @@
   background-size: 55%;
   background-position: calc(50% + var(--x)) calc(50% + var(--y));
   background-repeat: no-repeat;
+  
+  filter: invert(1) opacity(.05);
 
   rotate: var(--r);
   transition: rotate 0.3s;
@@ -230,55 +232,46 @@
 }
 
 /* Skills section */
-#skills {
+.card-section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 20vh;
 }
 
-#skills p {
+.card-section p {
   width: 60rem;
   max-width: 80vw;
   text-align: center;
-  margin: auto;
+
+  margin-top: 0;
   margin-bottom: 3rem;
 }
 
-#skills h3,
-#skills h4 {
+.card-section h4 {
   margin: 0;
+  margin-bottom: 0.3em;
 }
 
-#skills .cards-list {
-  box-sizing: border-box;
-  width: 90%;
-
-  padding: 20px 30px;
-  padding-bottom: 0;
-  border-radius: 10px;
-  margin-bottom: 50px;
-
-  background: var(--color-lighter-background);
-}
-
-#skills .cards-list ul {
+.card-section ul {
+  width: 80vw;
   list-style: none;
   padding: 0;
 
   overflow-x: auto;
 
   display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
   gap: 30px;
 }
 
-#skills .cards-list .card {
+.card-section .card {
   box-sizing: border-box;
 
-  padding: 20px;
-  border-radius: 10px;
+  padding: 25px;
+  border-radius: 15px;
 
-  background: var(--color-super-lighter-background);
+  background: var(--color-lighter-background);
   box-shadow: var(--shadow-raise-2);
 
   display: flex;
@@ -286,76 +279,20 @@
   align-items: center;
 }
 
-#skills .circular-progress {
+.card-section .circular-progress {
+  --text-color: #eee;
   margin-top: 20px;
-
-  position: relative;
-  width: 12rem;
-  aspect-ratio: 1;
-  border-radius: 50%;
-
-  background: conic-gradient(
-    var(--color) calc(var(--percentage) * 3.6deg),
-    var(--color-lighter-background) calc(var(--percentage) * 3.6deg)
-  );
-  box-shadow: var(--shadow-raise-2);
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 14rem;
 }
 
-#skills .circular-progress::after {
-  content: "";
-  background: var(--color);
-  width: 12.5%;
-  aspect-ratio: 1;
-  border-radius: 50%;
-
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-#skills .circular-progress .center {
-  position: absolute;
-  height: 75%;
-  width: 75%;
-  border-radius: 50%;
-
-  background: var(--color-super-lighter-background);
-  box-shadow: inset var(--shadow-raise-3);
-}
-
-#skills .circular-progress .center::after {
-  counter-reset: percentage var(--percentage);
-  content: counter(percentage) "%";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-#skills .circular-progress .after {
-  height: 100%;
-  width: 12.5%;
-
-  position: absolute;
-  transform: rotate(calc(var(--percentage) * 3.6deg));
-}
-
-#skills .circular-progress .after::after {
-  content: "";
-  background: var(--color);
-  width: 100%;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  position: absolute;
+.card-section .circular-progress::before {
+  z-index: unset;
 }
 
 /* Contacts */
 #contacts {
+  margin-top: 10vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
