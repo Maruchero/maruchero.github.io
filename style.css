@@ -1,4 +1,32 @@
 /* Landing section */
+#background {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+
+  filter: invert(1);
+  -webkit-mask-image: radial-gradient(ellipse at 50%, #0000000a, #0000 70%);
+  mask-image: radial-gradient(ellipse at 50%, #0000000a, #0000 70%);
+}
+
+#background span {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+
+  background-size: 55%;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  translate: var(--x) var(--y);
+  rotate: var(--r);
+  transition: rotate .3s;
+}
+
+#background span:hover {
+  rotate: calc(var(--r) + 90deg);
+}
+
 #landing-section #welcome {
   position: absolute;
   top: 50%;
@@ -15,6 +43,7 @@
   width: 45rem;
   max-width: 80vw;
 
+  text-shadow: 0 0 30px #0005;
   margin: auto;
 }
 
@@ -33,7 +62,7 @@
   height: min(70vh, 47vw);
   aspect-ratio: 8/5;
 
-  border-radius: 10px;
+  border-radius: 20px;
   padding: 10px;
   background: var(--color-lighter-background);
   box-shadow: var(--shadow-light-1), var(--shadow-raise-2);
@@ -124,7 +153,7 @@
 
   height: min(60vh, 40vw);
   aspect-ratio: 8/5;
-  border-radius: 10px;
+  border-radius: 20px;
   overflow: hidden;
 
   background: var(--color-lighter-background);
@@ -159,7 +188,7 @@
   box-sizing: border-box;
   height: 100%;
 
-  border-radius: 10px;
+  border-radius: 15px;
   border: 3px solid var(--color-border);
 
   background-image: url(img/logo.svg);
@@ -190,6 +219,14 @@
 
   font-family: var(--font-special);
   font-weight: 600;
+}
+
+#favourites-projects .button i {
+  transition: all .3s;
+}
+
+#favourites-projects .button:hover i {
+  margin-left: 0.3em;
 }
 
 /* Skills section */
