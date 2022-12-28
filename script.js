@@ -35,13 +35,13 @@ const projectSlider = new Slider("#project-slider");
 const bg = document.getElementById("background");
 let items = ["circle_8.svg", "square_18.svg", "triangle_6.svg"];
 let t = { min: -5, max: 5 };
-for (let i = 0; i < 2000; i++) {
+for (let i = 0; i < 600; i++) {
   let n = Math.floor(Math.random() * items.length);
   let x = Math.floor(Math.random() * (t.max - t.min) + t.min);
   let y = Math.floor(Math.random() * (t.max - t.min) + t.min);
   let r = Math.floor(Math.random() * 360);
   let img = document.createElement("span");
-  img.style.backgroundImage = "url(/img/" + items[n] + ")";
+  img.style.setProperty("--img", "url(/img/" + items[n] + ")");
   img.style.setProperty("--x", x + "px");
   img.style.setProperty("--y", y + "px");
   img.style.setProperty("--r", r + "deg");
