@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prato fiorito</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <div class="container-md flex-column align-items-center gap-sm-4">
+    <h1 class="mt-5 mb-0">Prato fiorito</h1>
+    <form onsubmit="genera(this); return false">
+      <div class="row gap-3">
+        <input type="number" class="form-control col" min="2" name="width" placeholder="Larghezza" />
+        <input type="number" class="form-control col" min="2" name="height" placeholder="Altezza" />
+        <button type="submit" class="btn btn-success col-2">Gioca <i class="bi bi-controller"></i></button>
+      </div>
+    </form>
+
+    <div class="main-content">
+      <div class="table-container">
+        <table id="table"></table>
+      </div>
+      <div class="marcatori mt-2">
+        <div>Marcatori A: <span id="marcatore-a">0</span></div>
+        <div>Marcatori B: <span id="marcatore-b">0</span></div>
+      </div>
+    </div>
+  </div>
+
+  <dialog id="lost-dialog" role="dialog" aria-modal="true">
+    <h2>Hai perso!</h2>
+    <form method="dialog">
+      <button type="submit" class="btn btn-primary">Ok</button>
+    </form>
+  </dialog>
+  <dialog id="win-dialog" role="dialog" aria-modal="true">
+    <h2>Hai vinto!</h2>
+    <form method="dialog">
+      <button type="submit" class="btn btn-primary">Ok</button>
+    </form>
+  </dialog>
+</body>
+
+</html>
