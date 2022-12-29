@@ -25,17 +25,17 @@
   mask-repeat: no-repeat;
 
   filter: grayscale(1);
-  opacity: .15;
+  opacity: .1;
 
   rotate: var(--r);
-  transition: all 1s ease-in;
+  transition: all 1s ease-out;
 }
 
 #background span:hover {
   rotate: calc(var(--r) + 90deg);
   opacity: 1;
   filter: grayscale(0);
-  transition: all .1s;
+  transition: all .1s ease-out;
 }
 
 #landing-section #welcome {
@@ -315,4 +315,9 @@
 
 #contacts a {
   text-decoration: underline;
+  transition: text-shadow .3s;
+}
+
+#contacts a:hover {
+  text-shadow: 0 0 5px #fff5;
 }

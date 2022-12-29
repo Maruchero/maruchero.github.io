@@ -171,6 +171,33 @@ h1 {
   align-items: center;
   text-align: center;
   height: 100%;
+
+  position: relative;
+}
+
+.nav-element:not(:last-child):after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0;
+  border-radius: 100px;
+  background: #fff;
+
+  position: absolute;
+  left: 50%;
+  translate: -50% .7em;
+
+  transition: text-shadow .3s;
+  transition: width .3s;
+}
+
+.nav-element:hover {
+  text-shadow: 0 0 5px #fff5;
+}
+
+.nav-element:hover::after {
+  width: 80%;
+  box-shadow: 0 0 5px #fff5;
 }
 
 .circle {
