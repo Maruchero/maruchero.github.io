@@ -45,9 +45,6 @@
   left: 50%;
   transform: translate(-50%, -50%);
 
-  width: max-content;
-  max-width: 100vw;
-
   text-align: center;
 }
 
@@ -138,6 +135,10 @@
   justify-content: center;
 
   margin-bottom: 15vh;
+}
+
+#favourites-projects h2 {  
+  text-align: center;
 }
 
 #favourites-projects .slider {
@@ -246,12 +247,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  
+  text-align: center;
 }
 
 .card-section p {
   width: 60rem;
   max-width: 80vw;
-  text-align: center;
 
   margin-top: 0;
   margin-bottom: 3rem;
