@@ -16,7 +16,7 @@ var width = 10;
 var height = 10;
 const riempimento = 0.1;
 
-async function genera(form) {
+async function generate(form) {
   // Prendi gli input
   const data = new FormData(form);
   if (data.get("width")) width = data.get("width");
